@@ -1,0 +1,66 @@
+@fire: #DC143C;
+@snow: #ffffff;
+@night: #000000;
+@sekundarna-boja: #5c0819;
+@velicna-fonta: 70px;
+body{
+  background-color: @fire;
+
+}
+.main{
+  width: 80%;
+  margin: 0 auto;
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    background-color: @sekundarna-boja;
+    float: left;
+    font-size: 35px;
+    height: 40px;
+    text-align: center;
+    width: 295px;
+    a {
+      color: @snow;
+      display: block;
+      text-decoration: none;
+      &:hover {
+        background-color: @night;
+      }
+    }
+  }
+}
+
+#slogan{
+  color: @night;
+  float: right;
+  width: 75%;
+  font-size: @velicna-fonta;
+  text-align: left;
+
+
+}
+.lightbox{
+  margin: 10px 50px;
+
+}
+
+.lightbox img{
+  margin-right: 35px;
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+.centralniSadrzaj{
+
+  padding: 20px;
+  margin-top: 30px;
+  background-color: @snow;
+  width: 94%;
+  height: 500px;
+}

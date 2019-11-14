@@ -1,0 +1,51 @@
+body {
+  background-color: #DC143C;
+}
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  background-color: #5c0819;
+  float: left;
+  font-size: 35px;
+  height: 40px;
+  text-align: center;
+  width: 295px;
+}
+ul li a {
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+}
+ul li a:hover {
+  background-color: #000000;
+}
+#slogan {
+  color: #000000;
+  float: right;
+  width: 75%;
+  font-size: 70px;
+  text-align: left;
+}
+.lightbox {
+  margin: 10px 50px;
+}
+.lightbox img {
+  margin-right: 35px;
+  padding: 15px;
+  text-align: center;
+}
+.centralniSadrzaj {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  width: 94%;
+  height: 500px;
+}
+/*# sourceMappingURL=O nama.css.map */

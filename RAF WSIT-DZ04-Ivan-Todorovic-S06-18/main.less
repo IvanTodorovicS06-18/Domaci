@@ -1,0 +1,78 @@
+@fire: #DC143C;
+@snow: #ffffff;
+@night: #000000;
+@sekundarna-boja: #5c0819;
+@font-familija: 'Times New Roman', Times, serif;
+body {
+  background-color: @fire;
+}
+.main {
+  margin: 0 auto;
+  width: 80%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    background-color: @sekundarna-boja;
+    float: left;
+    font-size: 35px;
+    height: 40px;
+    text-align: center;
+    width: 295px;
+    a {
+      color: @snow;
+      display: block;
+      text-decoration: none;
+      &:hover {
+        background-color: @night;
+      }
+    }
+  }
+}
+#slogan {
+  color: @night;
+  float: right;
+  font-size: 70px;
+  text-align: left;
+  width: 75%;
+}
+.centralniSadrzaj {
+  background-color: @snow;
+  height: 500px;
+  margin-top: 30px;
+  padding: 20px;
+  width: 94%;
+
+}
+.desniSidebar {
+  border: 2px solid @fire;
+  border-left: none;
+  display: inline-block;
+  float: right;
+  font-family: @font-familija
+  vertical-align: top;
+  width: 15%;
+}
+.leviSidebar {
+  float: left;
+
+}
+.border-radius(@param,@param2)
+{ border-radius: @param;
+  -webkit-border-radius: @param2;
+  -moz-border-radius: @param;
+}
+
+.dugme {
+
+  background-color: @fire;
+  color: @snow;
+  cursor: pointer;
+  margin: 4px 2px;
+  padding: 16px 32px;
+  text-decoration: none;
+  width: 200px;
+  .border-radius: (50px,100px);
+}

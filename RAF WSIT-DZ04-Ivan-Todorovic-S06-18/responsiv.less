@@ -1,0 +1,86 @@
+@fire: #DC143C;
+@snow: #ffffff;
+@night: #000000;
+@sekundarna-boja:  #81051e;
+@BURGER-BOJA:  #5c0819;
+@fon:  #84596B;
+@boja-proizbackg:  #CECFCE;
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  li {
+    background-color: @sekundarna-boja;
+    display: inline-block;
+    height: 40px;
+    width: 19%;
+
+    a {
+      color: @snow;
+      display: block;
+      font-size: 30px;
+      padding: 5 0;
+      text-align: center;
+      text-decoration: none;
+      &:hover {
+        background-color: @night;
+      }
+    }
+  }
+}
+.hamburger
+{
+  width: 500px;
+  height: 50px;
+  background-color: @BURGER-BOJA;
+  padding:10px;
+  display: none;
+}
+.hamburger .line
+{
+  width: 35px;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 30px;
+  background-color: @snow;
+  height: 5px;
+
+}
+body{
+  background-color: @fire;
+}
+.centralniSadrzaj{
+
+  padding: 20px;
+  margin-top: 30px;
+  background-color: white;
+  width: 95%;
+}
+
+.proizvodi{
+
+  display: inline-block;
+  width: 19%;
+  margin-top: 10px;
+}
+@media only screen and (max-width:800px)
+{
+  .nav
+  {
+    display: none;
+  }
+  ul li {
+    display: block;
+    width: 40%;
+  }
+  .hamburger
+  {
+    display: block;
+  }
+}
+
+
