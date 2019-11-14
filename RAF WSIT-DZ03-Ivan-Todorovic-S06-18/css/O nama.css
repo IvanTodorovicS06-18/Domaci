@@ -1,0 +1,66 @@
+body{
+    background-color: crimson;
+    
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+ul{
+   
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    float: left;
+    width: 295px;
+    text-align: center;
+    font-size: 35px;
+    height: 40px;
+    background-color:#5c0819;
+    
+}
+ul li a
+{
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+ul li a:hover
+{
+    background-color: black;
+}
+
+#slogan{
+    color: black;
+    float: right;
+    width: 75%;
+    font-size: 70px;
+    text-align: left;
+    
+   
+}
+.lightbox{
+    margin: 10px 50px;
+   
+}
+
+.lightbox img{
+    margin-right: 35px;
+    padding: 15px;
+    text-align: center;
+}
+
+
+
+.centralniSadrzaj{
+     
+    padding: 20px;
+    margin-top: 30px;
+    background-color: white;
+    width: 94%;
+    height: 500px;
+}

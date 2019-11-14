@@ -1,0 +1,102 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul
+{
+    list-style-type:  none;
+}
+ul li
+{
+    display: inline-block;
+    width: 19%;
+    background-color: #81051e;
+    height: 40px;
+}
+ul li a
+{
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    padding: 5 0 ;
+}
+ul li a:hover
+{
+    background-color: black;
+}
+.hamburger
+{
+    width: 500px;
+    height: 50px;
+    background-color: #5c0819;
+    padding:10px;  
+    display: none;
+}
+.hamburger .line
+{
+    width: 35px;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 30px;
+    background-color: white;
+    height: 5px;
+    
+}
+body{
+    background-color: crimson;
+}
+.centralniSadrzaj{
+     
+    padding: 20px;
+    margin-top: 30px;
+    background-color: white;
+    width: 95%;
+}
+
+.proizvodi{
+    
+    display: inline-block;
+   width: 19%;
+   margin-top: 10px;
+}
+@media only screen and (max-width:800px)
+{
+    .nav
+    {
+        display: none;
+    }
+    ul li {
+        display: block;
+        width: 40%;
+    }
+    .hamburger
+    {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+      background-color:  #84596B;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .centralniSadrzaj {
+      background-color: #CECFCE;
+    }
+}
+  
+@media only screen and (max-width: 1000px) {
+    .proizvodi {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin-left: 0;
+    }
+}
+
