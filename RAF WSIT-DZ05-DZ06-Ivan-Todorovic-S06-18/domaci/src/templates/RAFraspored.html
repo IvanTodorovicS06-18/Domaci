@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RAFraspored</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#unos").keyup(function () {
+                var value = $("#unos");
+                value = value.val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });   
+    </script>
+   
+</head>
+
+<body>
+    
+    <style>
+        #rows:nth-child(even) {
+            background-color: rgb(215, 235, 241);
+        }
+
+        #rows:nth-child(odd) {
+            background-color: rgb(124, 145, 185);
+        }
+    </style>
+    Search: <input type="text" id="unos">
+    <table border="1" style="border-collapse: collapse">
+        <thead>
+            <tr>
+                <th>Predmet</th>
+                <th>Tip</th>
+                <th>Nastavnik</th>
+                <th>Grupe</th>
+                <th>Dan</th>
+                <th>Termin</th>
+                <th>Ucionica</th>
+            </tr>
+        </thead>
+
+        <tbody id="myTable">
+            {% for red in redovi %}
+            <tr id="rows" style="text-align: center">
+                <td>{{red.split(',')[0]}}</td>
+                <td>{{red.split(',')[1]}}</td>
+                <td>{{red.split(',')[2]}}</td>
+                <td>{{red.split(',')[3]}}</td>
+                <td>{{red.split(',')[4]}}</td>
+                <td>{{red.split(',')[5]}}</td>
+                <td>{{red.split(',')[6]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <br>
+        <hr>
+        <br>
+        <table>
+            <td>
+                <ul style="list-style-type: none" float="left">
+                    {% for ime in sva_imena %}
+                    <li>{{ime}}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            
+            <td>
+                <ul style="list-style-type: none" float="right">
+                    {% for ucionica in sve_ucionice %}
+                    <li>{{ucionica}}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </table>
+</body>
+</html>
