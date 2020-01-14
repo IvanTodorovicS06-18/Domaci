@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete user</title>
+</head>
+<body>
+    <form action="/delete/{{x}}" method="POST" enctype="multipart/form-data">
+        {% for k in korisnici %}
+
+        {% if x == k['_id'] %}
+        <label> {{k['username']}}</label><br>
+        <p>password:<input type="password" name="password" value="{{k['password']}}"></p>
+        <p>date:<input type="text" name="date" value="{{k['date']}}"></p>
+        <p>Email:<input type="email" name="email" value="{{k['email']}}"></p>
+        <p>type:<input type="text" name="type" value="{{k['type']}}"></p>
+        <p><input type="submit" name="promeni" value="obrisi korisnika"></p>
+        {% endif %}
+
+        {% endfor %}
+
+
+    </form>
+
+    <form action="/deletePRO/{{x}}" method="POST" enctype="multipart/form-data">
+    
+        {% for p in proizvodi %}
+        {% if x == p['_id'] %}
+        <p>naziv:<input type="text" name="naziv" value="{{p['naziv']}}"></p>
+        <p>cena:<input type="number" name="cena" value="{{p['cena']}}"></p>
+        <p>kolicina:<input type="number" name="naziv" value="{{p['kolicina']}}"></p>
+        <p><input type="submit" name="promeni" value="obrisi proizvod"></p>
+        {% endif %}
+
+        {% endfor %}
+    </form>
+</body>
+</html>

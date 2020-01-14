@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update user</title>
+</head>
+<body>
+      <form action="/update/{{x}}" method="post" enctype="multipart/form-data">
+        {% for p in proizvodi %}
+        {% if x == p["_id"] %}
+            <p>Naziv:  <input type="text" name="naziv" value = "{{p['naziv']}}"></p>
+            <p>Cena: <input type="number" name="cena" value = "{{p['cena']}}"></p>
+            <p>Kolicina: <input type="number" name="kolicina" value = "{{p['kolicina']}}"></p>
+            <p>Slika: <input type="file" name="slika" value = "{{p['slika']}}"></p>
+            <p><input type="submit" name="izmeni" value ="Izmeni"></p>     
+            {% endif %}
+        {% endfor %}
+    </form>
+    <form action="/updateKR/{{x}}" method="post" enctype="multipart/form-data">
+        {% for k in korisnici %}
+
+         {% if x == k["_id"] %}
+         <label> {{k['username']}}</label><br><br>
+         <label>Email*<br> <input type='email' name='email' required value="{{k['email']}}"></label><br><br>
+         <label>Password*<br> <input type='password' name='password' required value="{{k['password']}}"></label><br><br>
+         <label>Gender*<br> <select name='gender' required value="{{k['gender']}}"><option>Male</option><option>Female</option><option>Other</option></select></label><br><br>
+         <label>Date of birth*<br> <input type='date' name='date' required value="{{k['date']}}"></label><br><br>
+         <label>Usertype*<br> <select name='usertype' required value="{{k['usertype']}}"><option value='seller'>Seller</option><option value='admin'>Admin</option><option value='buyer'>buyer</option></select></label><br><br>
+         <label>Photo*<br> <input type='file' name='photo'  value="{{k['photo']}}"></label><br><br>
+         <input type='submit' name='register' value='Izmeni'>
+    {% endif %}
+
+{% endfor %}       
+    </form>
+</body>
+</html>

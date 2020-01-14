@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title> Register Page </title>
+	</head>
+	<body>
+		<form action = '/register' method = 'POST'>
+			<label>Username<br> <input type='text' name='username' required></label><br><br>
+			<label>Email<br> <input type='email' name='email' required></label><br><br>
+            <label>Password<br> <input type='password' name='password' required></label><br><br>
+			<label>Confirm password<br> <input type='password' name='confirmPassword' required></label><br><br>
+			<label>Gender<br> <select name='gender' required><option>Male</option><option>Female</option><option>Other</option></select></label><br><br>
+			<label>Date of birth<br> <input type='date' name='date' required></label><br><br>
+			<label>Typeofuser<br> <select name='usertype' required><option value='seller'>Seller</option><option value='admin'>Admin</option><option value='buyer'>buyer</option></select></label><br><br>
+            <label>Photo<br> <input type='file' name='photo' required></label><br><br>
+            <input type='submit' name='register' value='Register'>
+		</form>
+	</body>
+</html>

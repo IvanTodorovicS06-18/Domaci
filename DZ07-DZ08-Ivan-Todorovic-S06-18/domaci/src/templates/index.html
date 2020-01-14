@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title> Home Page </title>
+		<style>	
+			img{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="container">
+			
+			{% for p in proizvodi %}
+				<div class="proizvod" style="border-bottom: 1px solid;">
+					<h1>{{p["naziv"]}}</h1>
+					<img src="..{{p['slika']}}" alt="">
+					<p>Cena: {{p['cena']}} RSD</p>
+					<p>Kolicina: {{p['kolicina']}}</p>
+					{% if korisnik["type"] == "buyer" %}
+						<form action="/dodaj_u_korpu" method="POST">
+							<p><input type="text" value="{{p['_id']}}" name="prodavac" hidden></p>
+							<p> <input type="submit" value="Dodaj u korpu"></p>
+						</form>
+						
+					{% endif %}
+					{% if session['_id'] == p['prodavacId'] %}
+							<form action="/update/{{p['_id']}}" method="GET">
+							<p> <input type="submit" value="Update"></p>
+						</form>
+						<form action="/deletePRO/{{p['_id']}}" method="GET">
+							<p> <input type="submit" value="Delete"></p>
+						</form>
+					{% endif %}
+				</div>
+			{% endfor %}
+
+
+			
+		</div>
+		
+		
+		
+
+
+		{% for k in korisnici %}
+		{% if session['type'] == "admin" %}
+		<li><a href="/user">{{k['username']}}</a></li>
+		
+		<form action="update" method="POST">
+			<p><li><a href="updateKR/{{k['_id']}}">Update</a></li></p>
+			
+		</form>
+		<form action="delete" method = "POST">
+			<p><li><a href="delete/{{k['_id']}}">Delete</a></li></p>
+
+		</form>
+		{% endif %}
+		{% endfor %}
+	
+		
+
+	
+	</body>
+</html>
+
